@@ -3,7 +3,7 @@
        %%% Bài 1 %%%
 
 % - Cau a - %
-
+fprintf('Xac dinh tinh on dinh');
 %     s^3 - 2 s^2 - s + 2
 %   -----------------------
 %   24 s^3 - 14 s^2 - s + 1
@@ -23,4 +23,11 @@ stable = (max(P) < 1)    % xac dinh do lon vector diem cuc lon nhat
    end
 
 % - Cau b - %
-[b0,B,A] = dir2cas(den,num)
+
+% Cau truc noi tiep %
+fprintf('Cau truc noi tiep');
+[b0,Bcas,Acas] = dir2cas(den,num)
+
+% Cau truc song song %
+fprintf('Cau truc song song');
+[C,Bpar,Apar] = dir2par(den,num)
