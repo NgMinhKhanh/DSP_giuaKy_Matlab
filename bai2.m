@@ -11,6 +11,7 @@ wp = 2*pi*fp/fsampl     %chuan hoa ve w
 wc = 2*pi*fs/fsampl
 As = -20 * log(0.005 / (1+0.005))   
 a = HP_FIR_window(wp,wc,As)       % tim dap uong xung bo loc
+%tem(a)
 filter_spect_1(a)                 % ve pho tan so cua bo loc
 
 % - Cau 2.b - % 
