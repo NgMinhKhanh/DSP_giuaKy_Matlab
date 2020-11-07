@@ -6,7 +6,7 @@
 fprintf('Xac dinh tinh on dinh');
 %     Z^3 - 2 Z^2 - Z + 2
 %   -----------------------
-%   24 Z^3 - 14 Z^2 - Z + 1
+%   24 s^3 - 14 s^2 - Z + 1
 
 num = [1,-2,-1,2]        % he so cua tu so
 den = [24,-14,-1,1]      % he so cua mau so
@@ -26,8 +26,8 @@ stable = (max(P) < 1)    % xac dinh do lon vector diem cuc lon nhat
 
 % Cau truc noi tiep %
 fprintf('Cau truc noi tiep');
-[b0,Bcas,Acas] = dir2cas(num,den)
+[b0,Bcas,Acas] = dir2cas(den,num)
 
 % Cau truc song song %
 fprintf('Cau truc song song');
-[R,P,K] = residuez(num,den)
+[R,P,K] = residuez(den,num)
