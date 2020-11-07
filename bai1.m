@@ -30,4 +30,4 @@ fprintf('Cau truc noi tiep');
 
 % Cau truc song song %
 fprintf('Cau truc song song');
-[C,Bpar,Apar] = dir2par(den,num)
+[R,P,K] = residuez(den,num)
