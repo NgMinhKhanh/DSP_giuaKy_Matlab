@@ -17,24 +17,28 @@ L = ceil(2*pi*C/khoangchuyentiep);
 if(mod(L,2)==0)
     L = L+ 1; % chon L la so le:
 end 
-win = window(@hamming, L);
-n =  -(L-1)/2 : (L-1)/2;
+%win = window(@hamming, L);
+n = -(L-1)/2 : (L-1)/2;
 n = n + eps;  % cong them eps=0.0000001 de tranh chia cho 0 
+win = 0.54 + 0.46*cos(2*pi*n/(L-1))
 hid = sin((pi-wc)*n)./(pi*n);
-h = (-1).^n .* hid .*win'
+h = (-1).^n.*hid .*win
+%-1).^n
 plot(n,h)
 filter_spect_1(h)          % ve pho tan so cua bo loc
 
 % - Cau 2.b - % 
+% Tin hieu ban dau %
 f_1 = 1900; 
 f_2 = 3000;
 F = gcd(f_1,f_2);
 T = 1/F;           % chu ky cua tin hieu x1
-tmax = 4*T
-t = 0:T/100:tmax
+tmax = 3*T
+t = 0:T/1000:tmax
 x1 = sin(2*pi*f_1*t) + 2*cos(2*pi*f_2*t);
 figure;
 subplot(3,2,1);
+%filter_spect_1(x1)
 plot(t,x1,'r');
 xlabel('Tin hieu ban dau')
 title('Mien thoi gian')
