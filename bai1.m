@@ -26,8 +26,13 @@ stable = (max(P) < 1)    % xac dinh do lon vector diem cuc lon nhat
 
 % Cau truc noi tiep %
 fprintf('Cau truc noi tiep');
-[b0,B,A] = dir2cas(num,den)
+[b0,Bcas,Acas] = dir2cas(num,den) 
 
 % Cau truc song song %
 fprintf('Cau truc song song');
-[R,P,K] = residuez(num,den)
+[C,Bpar,Apar] = dir2par(num,den);
+fprintf('\nC = \n%g ', C);
+fprintf('\nBpar = \n%g ', Bpar);
+%fprintf(C)
+%fprintf(Bpar)
+%fprintf(Apar)
