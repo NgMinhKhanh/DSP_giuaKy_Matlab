@@ -31,8 +31,8 @@ fprintf('Cau truc noi tiep');
 % Cau truc song song %
 fprintf('Cau truc song song');
 [C,Bpar,Apar] = dir2par(num,den);
-fprintf('\nC = \n%g ', C);
-fprintf('\nBpar = \n%g ', Bpar);
-%fprintf(C)
-%fprintf(Bpar)
+% fprintf('\nC = \n%g ', C);
+% fprintf('\nBpar = \n%g ', Bpar);
+% %fprintf(C)
+% %fprintf(Bpar)
 %fprintf(Apar)
